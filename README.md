@@ -4,6 +4,12 @@ Gra Go to prosta implementacja gry wieloosobowej w Pythonie, wykorzystująca bib
 MySQL do przechowywania danych oraz gniazdka (sockets) do komunikacji sieciowej. 
 Gra umożliwia dwóm graczom rozgrywkę na planszy Go o niestandardowych rozmiarach.
 
+Interfejs Użytkownika:
+Interfejs użytkownika aplikacji Go Game został zaimplementowany przy użyciu biblioteki Tkinter w języku Python. Pozwala on użytkownikom wybierać rozmiar planszy, wykonywać ruchy oraz obserwować przebieg gry na ekranie.
+
+Wymagania Techniczne:
+Aplikacja została napisana w języku Python 3 z wykorzystaniem modułów Tkinter (do interfejsu użytkownika), mysql-connector-python (do komunikacji z bazą danych MySQL) oraz funkcji gniazd (sockets) do obsługi komunikacji sieciowej. Do uruchomienia aplikacji wymagane jest posiadanie zainstalowanego interpretera Pythona oraz serwera MySQL.
+
 ## Funkcje
 
 - Interfejs graficzny (GUI) zaimplementowany za pomocą tkinter.
