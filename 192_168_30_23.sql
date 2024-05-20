@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 192.168.30.23
--- Czas generowania: 20 Maj 2024, 16:19
+-- Czas generowania: 20 Maj 2024, 16:21
 -- Wersja serwera: 8.0.18
 -- Wersja PHP: 8.2.18
 
@@ -26,6 +26,20 @@ USE `go_game_db`;
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `registration_date` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `wyniki`
 --
 
@@ -42,6 +56,14 @@ CREATE TABLE `wyniki` (
 --
 
 --
+-- Indeksy dla tabeli `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Indeksy dla tabeli `wyniki`
 --
 ALTER TABLE `wyniki`
@@ -50,6 +72,12 @@ ALTER TABLE `wyniki`
 --
 -- AUTO_INCREMENT dla zrzuconych tabel
 --
+
+--
+-- AUTO_INCREMENT dla tabeli `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `wyniki`
